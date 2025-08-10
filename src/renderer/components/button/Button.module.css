@@ -1,0 +1,61 @@
+.button {
+  font-family: "C64", monospace;
+  font-size: 18px;
+  display: flex;
+  gap: 6px;
+  padding: 14px 32px;
+  color: black;
+  background: linear-gradient(to bottom, #e2a847 50%, #c38c3e 50%);
+  border: 2px solid transparent; /* usamos border-image en lugar del color fijo */
+  border-image: linear-gradient(to bottom, #f7ca5a, #e2a847) 1; /* gradiente claro a menos claro */
+  box-shadow: inset 0 0 0 1px #f7ca5a, 0 4px 0 #a35d27, 0 8px 0 #090909;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reflejo en hover */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+}
+
+/* Activar animación en hover */
+.button:hover::before {
+  animation: shine 0.8s ease-in-out forwards;
+}
+
+/* Animación del reflejo */
+@keyframes shine {
+  from {
+    left: -75%;
+  }
+  to {
+    left: 125%;
+  }
+}
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #a35d27, 0 4px 0 #3b240f;
+}
+
+.buttonIcon {
+  padding: 6px 8px;
+  gap: 0px;
+  width: fit-content;
+  image-rendering: pixelated;
+}

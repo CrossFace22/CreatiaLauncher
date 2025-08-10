@@ -1,0 +1,66 @@
+{
+  "name": "creatialauncher",
+  "productName": "Creatia Launcher",
+  "version": "1.0.9",
+  "description": "Creatia 3 Launcher",
+  "main": "build/src/main.js",
+  "squirrelWindows": "Creatia Launcher",
+  "build": {
+    "publish": {
+      "provider": "s3",
+      "bucket": "creatia"
+    }
+  },
+  "scripts": {
+    "dev:react": "vite",
+    "build:react": "vite build",
+    "compile:main": "tsc -p tsconfig.main.json",
+    "watch:main": "tsc -p tsconfig.main.json --watch",
+    "start:electron": "electron .",
+    "dev": "concurrently \"npm:dev:react\" \"npm:watch:main && npm:start:electron\"",
+    "build": "npm run build:react && npm run compile:main",
+    "start": "npm run build && electron .",
+    "start:forge": "electron-forge start",
+    "make:forge": "electron-forge make",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "Legadyn",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.787.0",
+    "@xmcl/core": "^2.13.0",
+    "@xmcl/installer": "^5.4.0",
+    "@xmcl/task": "^4.1.1",
+    "dotenv": "^16.5.0",
+    "electron-log": "^5.2.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "find-java-home": "^2.0.0",
+    "msmc": "^5.0.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.2",
+    "undici": "^6.20.0",
+    "unzipper": "^0.12.3"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron-forge/publisher-s3": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.3.7",
+    "@types/unzipper": "^0.10.11",
+    "@types/which": "^3.0.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^32.3.3",
+    "vite": "^6.3.4",
+    "webpack-cli": "^6.0.1"
+  }
+}

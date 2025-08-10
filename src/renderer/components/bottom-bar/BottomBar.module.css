@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.bottomBar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212121;
+  padding: 32px 38px;
+  position: relative; /* Necesario para posicionar el EventCounter */
+}
+
+.button {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-50%) !important;
+  font-size: 32px !important;
+}
+
+.eventCounter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

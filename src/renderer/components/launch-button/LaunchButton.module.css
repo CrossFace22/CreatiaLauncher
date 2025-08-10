@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.button {
+  font-size: 22px !important;
+}
+.progressContainer {
+  margin-top: 16px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  z-index: 99;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) !important;
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // O ES2020, ES2021, etc.
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true, // Clave para la interoperabilidad de módulos
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext", // Vite usa módulos ES nativos
+    "moduleResolution": "node", // O "bundler" si usas TS 4.7+ y Vite lo soporta bien
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Vite se encarga de la transpilación y el empaquetado
+    "jsx": "react-jsx", // Habilita JSX para React 17+
+    // Añade paths si es necesario para importaciones absolutas
+    // "baseUrl": "./src",
+    // "paths": {
+    //   "@renderer/*": ["renderer/*"],
+    //   "@main/*": ["main/*"]
+    // }
+  },
+  "resolveJsonModule": true,                        /* Enable importing .json files. */
+
+  "include": ["./src/renderer", "vite.config.ts", "./src/resources"], // Asegúrate de incluir tus fuentes de React
+  "references": [{ "path": "./tsconfig.main.json" }] // Si tienes TSConfig separado para el main process
+}

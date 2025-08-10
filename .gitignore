@@ -1,0 +1,5 @@
+node_modules
+build
+.elauncher
+.env
+out/

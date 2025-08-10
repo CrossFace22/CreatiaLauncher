@@ -1,0 +1,5 @@
+{
+    "exportall.config.relExclusion": [
+        "/src/handlers/index.ts"
+    ]
+}

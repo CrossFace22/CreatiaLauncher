@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.textCountdown {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.textEvent {
+  font-size: 14px;
+  color: #eeb649;
+}
